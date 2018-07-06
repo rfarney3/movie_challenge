@@ -31,13 +31,14 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.movies);
     return (
       <div>
         <table className="header">
           <tbody>
             <tr>
               <td>
-                <img alt="" width="50px" src={logo} />
+                <img className="App-logo" alt="" width="180px" src={logo} />
               </td>
               <td className="title">Search Your Movies</td>
             </tr>

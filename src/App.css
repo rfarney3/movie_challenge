@@ -1,43 +1,24 @@
-.App {
-  text-align: center;
-}
-
 .header {
   background-color: black;
   display: block;
-  padding: 14px;
+  padding: 18px;
+  padding-left: 21rem;
   color: green;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .movie-list {
-  padding: 14px;
+  padding: 18px;
   display: block;
 }
 
 .title {
-  display: inline;
   text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
+  animation: App-logo-spin infinite 5s linear;
+  height: 50px;
 }
 
 @keyframes App-logo-spin {
