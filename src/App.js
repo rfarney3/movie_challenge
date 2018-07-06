@@ -31,7 +31,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.movies);
     return (
       <div>
         <table className="header">
@@ -46,6 +45,10 @@ class App extends Component {
         </table>
         <br />
         <input
+          style={{
+            paddingLeft: "45px",
+            marginLeft: "15px"
+          }}
           placeholder="Search by Title"
           onChange={this.filterSearch.bind(this)}
         />
