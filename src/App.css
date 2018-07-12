@@ -1,24 +1,30 @@
 .header {
   background-color: black;
   display: block;
-  padding: 18px;
-  padding-left: 21rem;
-  color: green;
+  padding: 15px;
+  color: yellow;
   font-size: 40px;
+  text-align: center;
+  height: 100px;
+}
+
+body {
+  background-image: url("screen.png");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .movie-list {
-  padding: 18px;
+  margin-left: 3%;
   display: block;
-}
-
-.title {
-  text-align: center;
+  overflow: scroll;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
-  height: 50px;
+  height: 75px;
 }
 
 @keyframes App-logo-spin {

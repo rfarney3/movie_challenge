@@ -1,31 +1,29 @@
-import React, { Component } from "react";
+import React from "react";
 const beginning = "https://image.tmdb.org/t/p/w185";
 
-class Movie extends Component {
-  render() {
-    return (
+const Movie = (props) => (
       <div className="movie-list">
         <table>
+          <tbody>
           <tr>
             <td>
               <img
-                alt={this.props.movie.poster_path}
+                alt={props.movie.poster_path}
                 width="90px"
-                src={`${beginning}` + this.props.movie.poster_path}
+                src={`${beginning}` + props.movie.poster_path}
               />
-              <p style={{ fontSize: "24px" }}>{this.props.movie.title}</p>
+              <p style={{ fontSize: "20px" }}>{props.movie.title}</p>
               <strong>Released: </strong>
-              {this.props.movie.release_date}
+              {props.movie.release_date}
               <br />
               <strong>Popularity: </strong>
-              {this.props.movie.popularity}
+              {props.movie.popularity}
             </td>
           </tr>
-          <p style={{ fontStyle: "italic" }}>{this.props.movie.overview}</p>
+          </tbody>
         </table>
+        <p style={{ fontStyle: "italic" }}>{props.movie.overview}</p>
       </div>
     );
-  }
-}
 
 export default Movie;
