@@ -1,11 +1,17 @@
 .header {
   background-color: black;
   display: block;
-  padding: 15px;
+  padding-left: 15px;
   color: yellow;
-  font-size: 40px;
-  text-align: center;
   height: 100px;
+}
+
+.screen {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  background-color: black;
 }
 
 body {
