@@ -7,11 +7,17 @@
 }
 
 .screen {
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-  position: relative;
-  background-color: black;
+  background-color:white;
+  position:absolute;
+  left:3.1%;
+  top:21%;
+  width:94.9%;
+  height:63%;
+
+  margin-left:-5px; /* -1/2 width */
+  margin-top:-10px; /* -1/2 height */
+  overflow: scroll;
+  background-attachment: fixed;
 }
 
 body {
@@ -23,7 +29,7 @@ body {
 }
 
 .movie-list {
-  margin-left: 3%;
+  padding: 1%;
   display: block;
   overflow: scroll;
 }

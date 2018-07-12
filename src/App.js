@@ -43,7 +43,7 @@ class App extends Component {
         {/* this is undefined on "this.fetchMovies" so it binds the current app.js file to the value of "this" inside of the filterSearch function*/}
         {/* allows you to bind the this object inside of the functions scope so you can call the fetchMovies function without getting undefined because it still has context */}
         <div className="screen">
-          {this.state.movies ? (this.state.movies.map(movie => <Movie key={movie.id} movie={movie} />)) : (null)}
+        {this.state.movies ? (this.state.movies.map(movie => <Movie key={movie.id} movie={movie} />)) : (null)}
         </div>
       </div>
     );
