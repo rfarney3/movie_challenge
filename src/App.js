@@ -17,9 +17,9 @@ class App extends Component {
     };
 
   fetchMovies(search) {
-    fetch(URL + `${API_KEY}` + language + query + search + "&page=" + `${this.state.page_num}`)
+    fetch(URL + `${API_KEY}` + language + query + search + "&page=" + this.state.page_num)
       .then(res => res.json())
-      .then(json => this.setState({ movies: json.results }));
+      .then(json => this.setState({ movies: json.results, total_pages: json.total_pages }));
   }
 
   filterSearch = event => {
@@ -30,7 +30,7 @@ class App extends Component {
   };
 
   nextPage = () => {
-    if(this.state.movies) {
+    if(this.state.movies && this.state.page_num < this.state.total_pages) {
       this.setState({
         page_num: this.state.page_num +=1
       }, () => this.fetchMovies(this.state.query))
@@ -38,7 +38,7 @@ class App extends Component {
   }
 
   previousPage = () => {
-    if(this.state.movies) {
+    if(this.state.movies && this.state.page_num !== 1) {
       this.setState({
         page_num: this.state.page_num -=1
       }, () => this.fetchMovies(this.state.query))
