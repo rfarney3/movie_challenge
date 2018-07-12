@@ -12,7 +12,8 @@ class App extends Component {
   state = {
       movies: [],
       total_pages: null,
-      page_num: 1
+      page_num: 1,
+      query: null
     };
 
   fetchMovies(search) {
@@ -23,13 +24,25 @@ class App extends Component {
 
   filterSearch = event => {
     let term = event.target.value;
-    if (term !== null) {
-      this.fetchMovies(term);
-    }
+    this.setState({
+      query: term
+    }, () => this.fetchMovies(this.state.query))
   };
 
-  paginateData = () => {
-    console.log("hey")
+  nextPage = () => {
+    if(this.state.movies) {
+      this.setState({
+        page_num: this.state.page_num +=1
+      }, () => this.fetchMovies(this.state.query))
+    }
+  }
+
+  previousPage = () => {
+    if(this.state.movies) {
+      this.setState({
+        page_num: this.state.page_num -=1
+      }, () => this.fetchMovies(this.state.query))
+    }
   }
 
   render() {
@@ -39,9 +52,11 @@ class App extends Component {
           <img className="App-logo" alt="" width="60px" src={popcorn} />
           <h1 style={{display: "inline", paddingLeft: "1%"}}>Search Your Movies</h1>
         </div>
-        <input style={{ marginLeft: "2.4%", marginBottom: "1%"}} placeholder="Search by Title" onChange={this.filterSearch.bind(this)}/>
-        {/* this is undefined on "this.fetchMovies" so it binds the current app.js file to the value of "this" inside of the filterSearch function*/}
-        {/* allows you to bind the this object inside of the functions scope so you can call the fetchMovies function without getting undefined because it still has context */}
+        <div>
+          <input style={{ marginLeft: "2.4%", marginBottom: "1%"}} placeholder="Search by Title" onChange={this.filterSearch}/>
+          <button onClick={this.previousPage}style={{marginLeft: "28%"}}>Previous Page</button>
+          <button onClick={this.nextPage}style={{marginLeft: "0%"}}>Next Page >></button>
+        </div>
         <div className="screen">
         {this.state.movies ? (this.state.movies.map(movie => <Movie key={movie.id} movie={movie} />)) : (null)}
         </div>
