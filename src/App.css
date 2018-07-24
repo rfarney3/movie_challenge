@@ -13,7 +13,7 @@
   top:21%;
   width:94.9%;
   height:63%;
-
+  text-align: center;
   margin-left:-5px; /* -1/2 width */
   margin-top:-10px; /* -1/2 height */
   overflow: scroll;
@@ -32,6 +32,9 @@ body {
   padding: 1%;
   display: block;
   overflow: scroll;
+  width: 45%;
+  text-align: center;
+  margin-left: 28%;
 }
 
 .App-logo {

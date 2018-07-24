@@ -7,7 +7,7 @@ const Movie = (props) => (
     <span style={{ fontSize: "20px" }}><strong>{props.movie.title}</strong></span><br/>
     <strong>Released: </strong> {props.movie.release_date} <br />
     <strong>Popularity: </strong> {props.movie.popularity}
-    <p style={{ fontStyle: "italic" }}>{props.movie.overview}</p><br/>
+    <p style={{ fontStyle: "italic" }}>{props.movie.overview}</p>
   </div>
 );
 
