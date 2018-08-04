@@ -53,7 +53,7 @@ class App extends Component {
           <h1 style={{display: "inline", paddingLeft: "1%"}}>Search Your Movies</h1>
         </div>
         <div>
-          <input style={{ marginLeft: "2.4%", marginBottom: "1%"}} placeholder="Search by Title" onChange={this.filterSearch}/>
+          <input style={{ marginLeft: "2.4%", marginBottom: "1%", borderRadius: "25px"}} placeholder="Search by Title" onChange={this.filterSearch}/>
           <button onClick={this.previousPage}style={{marginLeft: "28%"}}>Previous Page</button>
           <button onClick={this.nextPage}style={{marginLeft: "0%"}}>Next Page >></button>
         </div>
